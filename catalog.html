@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Барбершоп. Каталог.</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-logo" href="index.html">
+        <img src="#" width="111" height="24" alt="Логотип барбершопа «Бородинский»">
+      </a>
+      <nav class="main-navigation">
+        <ul class="main-menu">
+          <li><a href="info.html">Информация</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="price.html">Прайс-лист</a></li>
+          <li class="site-navigation-current"><a href="catalog.html">Магазин</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <ul class="user-interface">
+        <li class="user-login"><a>Вход</a></li>
+      </ul>
+    </header>
+    <main class="container">
+      <h1 class="page-title">Cредства для ухода</h1>
+      <nav class="breadcrumbs-navigation">
+        <ul class="breadcrumbs">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Магазин</a></li>
+          <li class="breadcrumbs-current">Средства для ухода</li>
+        </ul>
+      </nav>
+      <section class="filters">
+        <!--Если используем section всегда нужно добавлять заголовок? При необходимости скрывая его. -->
+        <h2 class="visually-hidden">Фильтр товаров</h2>
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend>Производители:</legend>
+<!--Зачем тут список? МОжно ли сделать перечистение чекбоксов и радиокнопок? -->
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="baxter-of-california" checked>
+                Baxter of California
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="mr-natty">
+                Mr Natty
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="suavecito" checked>
+                Suavecito
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="malin-goetz" >
+                Malin+Goetz
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="murrays">
+                Murray’s
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="american-crew" checked>
+                American Crew
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Группы товаров:</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="shaving">
+                Бритвенные принадлежности
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="hair-care" checked>
+                Средства для ухода
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="accessories">
+                Аксессуары
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit" class="filter-button button">Показать</button>
+        </form>
+      </section>
+      <section class="catalog">
+        <h2 class="visually-hidden">Каталог товаров</h2>
+<!--Можно ли делать article вместо списка? Пока один элемент, если так нормально, добавлю остальные -->
+        <article class="catalog-item">
+          <h3 class="catalog-item-caption">
+            <a href="catalog-item.html">
+              <span class="catalog-item-description">Набор для путешествий</span> <br>
+              <!--Можно ли использовать такие кавычки? Или надо спецсимволы вставлять? -->
+              <span class="catalog-item-name">«Baxter of California»</span>
+            </a>
+          </h3>
+          <!--Зачем оборачивать ссылку в p как в демо? Чтобы везде были блочные элементы? Может тогда div использовать -->
+          <a class="catalog-item-image" href="#">
+            <img src="img/product-1.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
+          </a>
+          <!--И тут p или div или всеже можно без них? -->
+          <p class="catalog-item-buy">
+            <span class="catalog-item-price">2900 &#8381;</span>
+            <a class="button" href="">Купить</a>
+          </p>
+        </article>
+
+        <ul class="pagination-list">
+          <li class="pagination-item"><a href="#">1</a></li>
+          <li class="pagination-item pagination-item-current"><a>2</a></li>
+          <li class="pagination-item"><a href="#">3</a></li>
+          <li class="pagination-item"><a href="#">4</a></li>
+        </ul>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <address class="footer-contacts">
+        Барбершоп «Бородинский»<br>
+        Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+        <a href="map.html">Как нас найти?</a><br>
+        Телефон: +7 (812) 666-02-66
+      </address>
+      <div class="footer-social">
+        <b>Давайте дружить!</b>
+        <ul>
+          <li><a class="social-button" href="#">Вконтакте</a></li>
+          <li><a class="social-button" href="#">Фейсбук</a></li>
+          <li><a class="social-button" href="#">Инстаграм</a></li>
+        </ul>
+      </div>
+      <p class="footer-copyright">
+        <b>Разработано:</b> <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+      </p>
+    </footer>
+
+    <section class="modal modal-login">
+      <h2>Личный кабинет</h2>
+      <p>Введите свой логин и пароль.</p>
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <input class="login-icon-user" type="text" name="login" placeholder="Логин">
+        </p>
+        <p>
+          <input class="login-icon-password" type="password" name="password" placeholder="Пароль">
+        </p>
+        <p class="login-password-info">
+          <input type="checkbox" name="remember" class="visually-hidden">
+          Запомните меня
+          <a class="restore" href="#">Я забыл пароль!</a>
+        </p>
+        <button class="button" type="submit">Войти</button>
+      </form>
+      <span class="modal-close">x</span>
+    </section>
+  </body>
+</html>
